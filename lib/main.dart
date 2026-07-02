@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-   var fruitNames = ['Mango','Banana','Apple','Graphs','Watermelom','Cherry','Peach'];
+   var Attars = ['Ameer Ul Oud','Ehsas Ul Arabia','Bakarat Rouje','Savage','Aventus Creed','Silver','Full','Fawakah Makkah'];
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -86,60 +86,19 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-
-body: ListView.builder(itemBuilder: (context , index){
-  return Text(fruitNames[index], style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900),);
-},
-itemCount: fruitNames.length,
-  itemExtent: 50,
-  // scrollDirection: Axis.horizontal,
-),
-
-// body: ListView.separated(itemBuilder: (context, index){
-//   return Text(fruitNames[index], style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700),);
-// },
-//
-// itemCount: fruitNames.length,
-// separatorBuilder: (context, index) {
-//   return Divider(height: 100, thickness: 5, color:  Colors.lightBlue,);
-// },
-//
-// ),
-
-
-//       body: ListView(
-//      scrollDirection: Axis.horizontal,
-//         reverse: true,
-//         children: [
-// Padding(
-//     padding:  const EdgeInsets.all(9.0),
-//   child: Text("Mango", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),),
-//
-// ),
-//           Padding(
-//             padding:  const EdgeInsets.all(9.0),
-//             child: Text("Apple", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),),
-//
-//           ),
-//           Padding(
-//             padding:  const EdgeInsets.all(9.0),
-//             child: Text("Banana", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),),
-//
-//           ),
-//           Padding(
-//             padding:  const EdgeInsets.all(9.0),
-//             child: Text("Watermelon", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),),
-//
-//           ),
-//           Padding(
-//             padding:  const EdgeInsets.all(9.0),
-//             child: Text("Peach", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),),
-//
-//           ),
-//
-//         ],
-//
-//       ),
+    body: ListView.separated(itemBuilder: (context, index){
+     return ListTile(
+     leading: Text('${index + 1}'),
+     title:  Text(Attars[index]),
+      subtitle: Text("Orignal premium Attar"),
+       trailing: Icon(Icons.add),
+     );
+    },
+     itemCount: Attars.length,
+      separatorBuilder: (context, index){
+      return Divider(height: 15, thickness: 2,);
+      },
+    ),
 
     );
   }
